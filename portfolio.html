@@ -17,20 +17,34 @@
     h2 { color: #2b6cb0; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
     .project, .info-block, .experience { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     .project h3, .experience h3 { margin-top: 0; color: #2b6cb0; }
-    .project a, .experience a { color: #2b6cb0; font-weight: 500; }
+    .project a.btn-projet, .experience a.btn-projet { color: white; /*Priorité au texte blanc*/}
     .project a:hover, .experience a:hover { text-decoration: underline; }
     .tag { display: inline-block; background: #eef; padding: 4px 8px; margin: 3px; border-radius: 4px; font-size: 0.85em; }
     footer { background: #2b6cb0; color: white; text-align: center; padding: 15px; margin-top: 30px; }
     /*Boutons projets avec dégradé*/
-    .btn-projet { display: inline-block; background: linear-gradient(135deg, #2b6cb0, #4a90e2); /*Dégradé bleu*/color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); transition: all 0.3s ease; }
-    /*Effet au survol*/
-    .btn-projet: hover {background: linear-gradient(135deg, #1e4e8c, #357ABD); /* Dégradé plus foncé */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    ul { margin: 8px 0 0 20px; }
-
-  
-  </style>
+    .btn-projet { 
+      display: inline-block; 
+      background: linear-gradient(135deg, #2b6cb0, #4a90e2); /*Dégradé bleu*/
+      color: white; /*!important, Forcer le texte blanc*/
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease; }
+      /*Effet au survol*/
+    .btn-projet:hover {
+      background: linear-gradient(135deg, #1e4e8c, #357ABD); /* Dégradé plus foncé */
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      
+      /*Priorité pour les boutons dans .project et .experience */
+      .project a.btn-projet,
+      .experience a.btn-projet {
+        color: white ; /*important*/
+      }
+    </style>
 </head>
 <body>
 
@@ -59,7 +73,6 @@
     <a class="btn-projet" href="http://sucess.myartsonline.com/html/index.html" target="_blank">Voir le projet</a>
   </div>
 
-  <div class="project">
     <h3>CINEMA LA DERNIÈRE SÉANCE</h3>
     <p>Plateforme de découverte cinématographique invitant les utilisateurs à explorer différents genres et à partager leurs expériences (création de page web dynamique, Html, Css, Js et Php).</p>
     <p><strong>Genres :</strong> Thriller, aventure, comics, guerre, horreur, animation, société</p>
@@ -71,8 +84,8 @@
     <p>Projet de développement numérique via META & IBM.</p>
     <p><strong>Meta Database Engineer :</strong>Introduction to Database</p>
     <p><strong>IBM Full Stack Software Developer :</strong>Introduction to HTML, CSS, & JavaScript</p>
-    <a class="btn-projet" href="file:///C:/Users/anani/Documents/Cours%20CODAGE/COURSERA/Intro%20FullStack/Html/index.html" target="_blank">Activité META</a>
-    <a class="btn-projet" href="file:///C:/Users/anani/Documents/Cours%20CODAGE/COURSERA/Intro%20FullStack/Html/mywebpage.html" target="_blank">Activité IBM</a>
+    <a class="btn-projet" href="https://github.com/MikeTD24/mon-portfolio/blob/main/unitc.html" target="_blank">Activité META</a>
+    <a class="btn-projet" href="https://github.com/MikeTD24/mon-portfolio/blob/main/mywebpage.html" target="_blank">Activité IBM</a>
   </div>
 </section>
 
