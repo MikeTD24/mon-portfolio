@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- This is your page title that appears on the browser window or tab -->
+<title>Unit Conversions</title>
+<style>
+        /* Reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+/* Style général */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+  color: #f0f0f0;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Header principal */
+header {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #00d9ff;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(0,217,255,0.7);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+nav a button {
+  background: linear-gradient(135deg, #00d9ff, #0077ff);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav a button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0,217,255,0.7);
+}
+
+/* Sections */
+section {
+  margin-bottom: 50px;
+}
+
+figure {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 8px;
+  color: #aaa;
+}
+
+/* Articles et fieldsets */
+article {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+  backdrop-filter: blur(6px);
+}
+
+fieldset {
+  border: 2px solid #00d9ff;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #00d9ff;
+}
+
+label {
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px 0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #2c2c3c;
+  color: #f0f0f0;
+}
+
+button {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,107,107,0.7);
+}
+
+/* Aside */
+aside {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: #ddd;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #00d9ff;
+}
+
+/* Go Home */
+#go-home {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#go-home img {
+  width: 45px;
+  transition: transform 0.3s;
+  filter: drop-shadow(0 0 8px #00d9ff);
+}
+
+#go-home img:hover {
+  transform: rotate(360deg);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 40px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+}
+
+article, aside {
+    width: 90%;
+}
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 1.6rem;
+}
+
+nav a button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input, button {
+    font-size: 0.9rem;
+}
+}
+
+
+</style>
+</head>
+<body>
+    <section id="home">
+        <!-- This is the main heading -->
+        <header><b>Unit Conversions</b></header>
+        <nav>
+            <!-- Button for redirecting users to the temperature section -->
+            <a href="#temperature"><button>Temperature</button></a>
+            <!-- Button for redirecting users to the weight section -->
+            <a href="#weight"><button>Weight</button></a>
+            <!-- Button for redirecting users to the distance section -->
+            <a href="#distance"><button>Distance</button></a>
+        </nav>
+    </section>
+
+    <div id="all-conversion-sections">
+        <!-- This will have the conversion sections for Temperature, Weight, and Distance -->
+
+        <section id="temperature">
+            <!-- Temperature conversion section -->
+            <div id="tmp">
+                <figure>
+                    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="200px"/>
+                    <figcaption>Celsius to Fahrenheit Conversion</figcaption>
+                </figure>
+                <article>
+                    <!-- This contains the specific elements for temperature conversion -->
+                    <fieldset>
+                        <legend>Temperature</legend>
+                        <!-- Label for Temperature input -->
+                        <label for="celsius">Celsius</label> <br/>
+                        <input type="number" id="celsius"> <br/>
+
+                        <!-- The conversion button -->
+                        <button id="temperature"> Convert </button> <br/>
+
+                        <!-- Label for Temperature output -->
+                        <input type="number" id="fahrenheit"> <br/>
+                        <label for="fahrenheit">Fahrenheit</label>
+                    </fieldset>
+                </article>
+                <aside>
+                    To convert celsius to fahrenheit yourself, use this formula replacing the `C` with your temperature in celsius: (C × 9/5) + 32
+                </aside>
+            </div>
+        </section>
+
+        <section id="weight">
+            <!-- Weight conversion section -->
+            <div id="wgt">
+                <figure>
+                    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png" width="200px"/>
+                    <figcaption>Kilogram to Pound Conversion</figcaption>
+                </figure>
+                <article>
+                    <!-- This contains the specific elements for weight conversion -->
+                    <fieldset>
+                        <legend>Weight</legend>
+                        <!-- Label for Weight input -->
+                        <label for="kilo">Kilograms</label> <br/>
+                        
+                        <input type="number" id="kilo"> <br/>
+                        
+                        <!-- The conversion button -->
+                        <button id="weight"> Convert </button> <br/>
+                        
+                        <!-- Label for Weight output -->
+                        <input type="number" id="pounds"> <br/>
+                        <label for="pounds">Pounds</label>
+                    </fieldset>
+                </article>
+                <aside>
+                    To convert kilograms to pounds yourself, use this formula replacing the `kg` with your weight in kilograms: kg x 2.205
+                </aside>
+            </div>
+        </section>
+
+        <section id="distance">
+          <!-- Distance conversion section -->
+          <div id="dst">
+            <figure>
+              <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png" width="200px"/>
+              <figcaption>Kilometer to Mile Conversion</figcaption>
+          </figure>
+
+          <article>
+              <!-- This contains the specific elements for distance conversion -->
+              <fieldset>
+               <legend>Distance</legend>
+               <!-- Label for Distance input -->
+               <label for="km">Kilometers</label> <br/>
+
+               <input type="number" id="km"> <br/>
+
+               <!-- The conversion button -->
+               <button id="distance"> Convert </button> <br/>
+
+               <!-- Label for Distance output -->
+               <input type="number" id="miles"> <br/>
+
+               <label for="miles">Miles</label>
+           </fieldset>
+       </article>
+       <aside>
+           To convert kilometers to miles yourself, use this formula replacing the `km` with your distance in kilometers: km &divide; 1.609
+       </aside>
+   </div>
+</section>
+</div>
+
+<div id="go-home">
+  <a href="#home">
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg"/>
+</a>
+</div>
+<footer>Learn more about HTML as a part of the IBM Fullstack Cloud Developer Certification</footer>
+</body>
+</html>
