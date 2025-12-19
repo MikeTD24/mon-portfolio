@@ -18,9 +18,7 @@ et quelques projets réalisés.
 - Présenter mes projets et compétences
 
 ## 📸 Aperçu
-(assets/preview-home.png)
-(assets/preview-home2.png)
-(assets/preview-home3.png)
+![Acceuil](assets/preview-home.png)
 
 ## 🚀 Lancer le projet en local
 Ouvrir le fichier `index.html` dans un navigateur
