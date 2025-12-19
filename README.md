@@ -19,6 +19,8 @@ et quelques projets réalisés.
 
 ## 📸 Aperçu
 ![Acceuil](assets/preview-home.png)
+![Projets](assets/preview-home2.png)
+![Projets](assets/preview-home3.png)
 
 ## 🚀 Lancer le projet en local
 Ouvrir le fichier `index.html` dans un navigateur
